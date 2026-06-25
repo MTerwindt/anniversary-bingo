@@ -36,7 +36,7 @@
   .eyebrow sup{font-size:.6em;letter-spacing:0;top:-.15em;}
   h1{
     font-family:"Anton",sans-serif;text-transform:uppercase;
-    line-height:.86;font-size:clamp(40px,12.5vw,66px);
+    line-height:1.04;font-size:clamp(40px,12.5vw,66px);
     color:var(--ink);letter-spacing:.01em;margin:6px 0 2px;
     /* riso mis-register shadow */
     text-shadow:3px 3px 0 var(--pink);
@@ -127,7 +127,7 @@
     <div class="eyebrow">A Cam Browning Bingo Card<sup>&trade;</sup></div>
     <h1>Anniversary<br>Bingo</h1>
     <div class="sub">BROOKLYN EDITION &middot; MICK &amp; LEAH &middot; 14 YEARS, 4 MARRIED</div>
-    <div class="rules">Tap a square when you spot it in the wild. Five in a row = winner buys the natural wine.</div>
+    <div class="rules">Tap a square when you spot it in the wild. Five in a row = loser buys the natural wine.</div>
   </header>
 
   <div class="status" id="status">Spotted: 1 of 25</div>
@@ -217,7 +217,7 @@
 
     const hasBingo = lines.some(line => line.every(idx => marked[idx]));
     if (hasBingo){
-      statusEl.textContent = 'BINGO \u2014 LOSER BUYS THE WINE';
+      statusEl.textContent = 'BINGO \u2014 LOSER BUYS THE NATURAL WINE';
       statusEl.classList.add('win');
     } else {
       statusEl.textContent = 'Spotted: ' + n + ' of 25';
